@@ -95,10 +95,9 @@ public class FactureServiceImpl implements IFactureService {
 		return facture;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public List<Facture> getFacturesByFournisseur(Long idFournisseur) {
-			Fournisseur fournisseur = fournisseurRepository.findById(idFournisseur).get();
+			Fournisseur fournisseur = fournisseurRepository.findById(idFournisseur).orElse(null);
 			return (List<Facture>) fournisseur.getFactures();
 		
 		  	
