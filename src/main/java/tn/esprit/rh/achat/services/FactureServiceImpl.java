@@ -96,10 +96,10 @@ public class FactureServiceImpl implements IFactureService {
 	}
 
 	@Override
-	public List<Facture> getFacturesByFournisseur(Long idFournisseur) {
+	public List<Facture> getFacturesByFournisseur(Long idFournisseur) throws Exception {
 		Fournisseur fournisseur = fournisseurRepository.findById(idFournisseur).orElse(null);
 		if (fournisseur == null){
-			return  (List<Facture>) fournisseur.getFactures();
+			throw new Exception("fournisseur null");
 		}
 		return (List<Facture>) fournisseur.getFactures();
 	}

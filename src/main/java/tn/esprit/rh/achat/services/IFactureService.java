@@ -8,7 +8,7 @@ import java.util.List;
 public interface IFactureService {
 	List<Facture> retrieveAllFactures();
 
-	List<Facture> getFacturesByFournisseur(Long idFournisseur);
+	List<Facture> getFacturesByFournisseur(Long idFournisseur) throws Exception;
 
 	Facture addFacture(Facture f);
 
