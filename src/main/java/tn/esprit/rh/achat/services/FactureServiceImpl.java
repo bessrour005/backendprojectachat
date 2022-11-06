@@ -1,6 +1,5 @@
 package tn.esprit.rh.achat.services;
 
-import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -97,8 +96,11 @@ public class FactureServiceImpl implements IFactureService {
 	}
 
 	@Override
-	public List<Facture> getFacturesByFournisseur(@NonNull Long idFournisseur) {
+	public List<Facture> getFacturesByFournisseur(Long idFournisseur) {
 		Fournisseur fournisseur = fournisseurRepository.findById(idFournisseur).orElse(null);
+		if (fournisseur == null){
+			return  (List<Facture>) fournisseur.getFactures();
+		}
 		return (List<Facture>) fournisseur.getFactures();
 	}
 
