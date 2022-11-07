@@ -28,8 +28,8 @@ public class OperServiceImplTest {
 	@Test
 	public void testAddOperateur() throws ParseException {
 		Operateur op = new Operateur();
-		op.setNom("Yassine");
-		op.setPrenom("Makhlouf");
+		op.setNom("Asma");
+		op.setPrenom("Bessrour");
 		op.setPassword("123456");
 		assertNotNull(op.getNom());
 		assertNotNull(op.getPrenom());
@@ -40,8 +40,8 @@ public class OperServiceImplTest {
 	@Test
 	public void testModifierOperateur() throws ParseException {
 		Operateur op = new Operateur();
-		op.setNom("yassine");
-		op.setPrenom("makh");
+		op.setNom("asma");
+		op.setPrenom("bess");
 		op.setPassword("123456");
 		assertNotNull(op.getNom());
 		assertNotNull(op.getPrenom());
@@ -49,8 +49,8 @@ public class OperServiceImplTest {
 		operateurService.addOperateur(op);
 		log.info("operateur ajouter avec success");
 		
-		op.setNom("yass");
-		op.setPrenom("makh");
+		op.setNom("sou");
+		op.setPrenom("bes");
 		op.setPassword("123456789");
 		assertNotNull(op.getNom());
 		assertNotNull(op.getPrenom());
@@ -63,8 +63,8 @@ public class OperServiceImplTest {
 	@Test
 	public void testDeleteOperateur() throws ParseException {
 		Operateur op = new Operateur();
-		op.setNom("yassin");
-		op.setPrenom("makhlouff");
+		op.setNom("asma");
+		op.setPrenom("besrour");
 		op.setPassword("1234");
 		
 		operateurService.addOperateur(op);
