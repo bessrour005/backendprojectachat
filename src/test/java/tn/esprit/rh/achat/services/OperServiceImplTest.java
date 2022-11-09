@@ -64,7 +64,7 @@ public class OperServiceImplTest {
 	public void testDeleteOperateur() throws ParseException {
 		Operateur op = new Operateur();
 		op.setNom("asma");
-		op.setPrenom("bessrour");
+		op.setPrenom("besrour");
 		op.setPassword("1234");
 		
 		operateurService.addOperateur(op);
